@@ -18,7 +18,10 @@
     <!-- ******************************************************************** -->
     <!-- Include context files from different layers -->
     <!-- ******************************************************************** -->
+   	<import resource="classpath:config.xml" />
     <import resource="classpath:rest.xml" />
+    <import resource="classpath:service.xml" />
+    <import resource="classpath:dao.xml" />
   <!--   <import resource="classpath:dao.xml" />
     <import resource="classpath:config.xml" />
     <import resource="classpath:service.xml" />

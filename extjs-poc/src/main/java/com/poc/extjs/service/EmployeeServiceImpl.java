@@ -10,7 +10,7 @@ import com.poc.extjs.domain.Employee;
 import com.poc.extjs.proxy.EmployeeService;
 import com.poc.extjs.repository.EmployeeRepo;
 
-@Service("EmployeeService")
+@Service("EmployeeServiceImpl")
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 	

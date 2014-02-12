@@ -19,12 +19,12 @@ public class EmployeeRepoTest extends RepoTestBase{
 	public void testCreate(){
 		
 		Employee employee = new Employee();
-		employee.setEmail("test@gmail.com");
-		employee.setName("test");
-		employee.setPhone("2255");
-		employee.setPlace("bgr");
-		employee.setState("karnataka");
-		employee.setStatus("Active");
+		employee.setEmail("test1@gmail.com");
+		employee.setName("test1");
+		employee.setPhone("22551");
+		employee.setPlace("bgr1");
+		employee.setState("karnataka1");
+		employee.setStatus("Active1");
 		
 		employeeRepo.save(employee);
 	}

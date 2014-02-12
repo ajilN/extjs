@@ -17,11 +17,22 @@ Ext.define("extjspoc.view.ModalEmployee", {
     		 debugger;
     		 Ext.getCmp('emp-modal-form').updateRecord();
     		 var record = Ext.getCmp('emp-modal-form').getRecord();
-    		 Ext.getCmp('modalemployee-window').close();
-    		 Ext.getCmp('employee-grid').getView().refresh();
-    		 Ext.getStore('Employee').sync();
-    		 //Ext.Msg.alert('Success --- ');
-    		 
+    		 Ext.Ajax.request({
+					url: 'rest/employee/save',
+					method: 'POST',
+					scope: this,
+					jsonData: Ext.JSON.encode(record.data),
+					success: function(response, opts) {
+						 Ext.getCmp('modalemployee-window').close();
+			    		 Ext.getCmp('employee-grid').getView().refresh();
+					},
+					failure: function(response, opts) {
+						console.log('rest/employee/save', response);
+					}
+				});
+    		 /*Ext.getCmp('modalemployee-window').close();
+    		 Ext.getCmp('employee-grid').getView().refresh();*/
+    		// Ext.getStore('Employee').sync();
     	 }
     }]
 });
