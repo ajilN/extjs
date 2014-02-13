@@ -32,7 +32,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+		<!-- repo url 'https://github.com/ajilN/extjs.git' -->
         <!-- Add this as Spring 3.2.1-RELEASE update -->
         <dependency>
             <groupId>org.springframework</groupId>
